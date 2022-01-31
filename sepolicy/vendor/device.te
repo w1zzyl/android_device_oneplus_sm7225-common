@@ -1,8 +1,7 @@
 type byte_cntr_device, dev_type;
 type fingerprintd_device, dev_type;
 type fragment_monitor_device, dev_type;
-type op1_block_device, dev_type;
-type op2_block_device, dev_type;
+type opluslog_block_device, dev_type;
 type param_block_device, dev_type;
 type param_device, dev_type;
 type reserve1_block_device, dev_type;
