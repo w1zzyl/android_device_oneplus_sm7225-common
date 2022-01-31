@@ -1,0 +1,5 @@
+allow bluetooth incremental_prop:file read;
+
+# For Bluetooth to check what profile are available
+allow bluetooth proc_filesystems:file r_file_perms;
+get_prop(bluetooth, incremental_prop)
