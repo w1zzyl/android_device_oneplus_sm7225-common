@@ -90,17 +90,13 @@ vendor.voice.path.for.pcm.voip=true
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.bluetooth.btsnoopdefaultmode=
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
-persist.vendor.bluetooth.bt.uart.log=1
 persist.vendor.bt.a2dp.hal.implementation=true
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 persist.vendor.btstack.enable.lpa=true
 persist.vendor.btstack.enable.twsplus=false
-persist.vendor.oneplus.bt.asd.chain=0
-persist.vendor.oneplus.bt.asd.firmware=false
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false
@@ -109,9 +105,8 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
-ro.bluetooth.library_name=libbluetooth_qti.so
 ro.vendor.bluetooth.wipower=false
-sys.fflag.override.settings_bluetooth_hearing_aid=true
+vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.camera,com.oem.autotest,com.oneplus.factorymode
