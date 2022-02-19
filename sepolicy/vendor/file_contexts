@@ -145,10 +145,6 @@
 # (e.g. Google Camera App)
 /mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0
 
-# OP1, OP2 files
-/mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
-/mnt/vendor/op2(/.*)?    u:object_r:op2_file:s0
-
 # Persist files
 /mnt/vendor/persist                                  u:object_r:vendor_data_file:s0
 /mnt/vendor/persist/camera(/.*)?                     u:object_r:oem_file:s0
