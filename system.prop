@@ -14,6 +14,9 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # Charger
 ro.charger.disable_init_blank=true
 
+# Codec2 for audio and OMX for Video
+debug.stagefright.ccodec=1
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
@@ -43,6 +46,10 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Netflix
 ro.netflix.bsp_rev=Q7250-19133-1
+
+# OnePlus
+ro.vendor.product.manufacturer.db=OP_PHONE
+ro.vendor.product.device.db=OP_DEVICE
 
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
