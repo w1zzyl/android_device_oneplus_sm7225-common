@@ -17,9 +17,6 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Include GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -28,9 +25,6 @@ $(call inherit-product, vendor/oneplus/sm7225-common/sm7225-common-vendor.mk)
 
 # Inherit WfdCommon from vendor/oneplus/extras
 $(call inherit-product, vendor/oneplus/extras/WfdCommon.mk)
-
-# Inherit OPCamera from vendor/oneplus/apps
-$(call inherit-product, vendor/oneplus/apps/ebba/config.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -91,7 +85,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -126,7 +119,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.3-impl \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.lito \
     audio.r_submix.default \
@@ -151,7 +143,6 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libsndmonitor \
     libspkrprot \
-    libssrec \
     libvisualizer \
     libvolumelistener
 
@@ -233,7 +224,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.lito \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libsdmcore \
     libsdmutils \
@@ -253,7 +243,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.9.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
-    vendor.oneplus.hardware.display@1.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.mapper@1.0.vendor \
@@ -266,20 +255,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OnePlusDoze
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.oneplus \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus \
-    vendor.oneplus.fingerprint.extension@1.0 \
-    vendor.oneplus.hardware.display@1.0
+    vendor.oneplus.fingerprint.extension@1.0
 
 # FOD
 EXTRA_FOD_ANIMATIONS := true
@@ -456,10 +438,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     KeyHandler
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -468,10 +446,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.2-service-qti
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -487,7 +461,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \

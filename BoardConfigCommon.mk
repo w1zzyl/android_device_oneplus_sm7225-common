@@ -35,8 +35,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
-TARGET_USES_64_BIT_BINDER := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
@@ -50,8 +48,9 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
-TARGET_KERNEL_SOURCE := kernel/oneplus/$(TARGET_DEVICE)
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm7225
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r487747c
 TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig
 
 # Platform
